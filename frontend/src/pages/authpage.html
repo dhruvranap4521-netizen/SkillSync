@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Skill Sync - User Profile Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#0088FF",
+              "background-light": "#F3F4F6",
+              "background-dark": "#0F172A",
+              "card-dark": "#1E293B",
+              "accent-dark": "#334155",
+            },
+            fontFamily: {
+              display: ["Inter", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "12px",
+            },
+          },
+        },
+      };
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .primary-gradient-btn {
+            background: linear-gradient(135deg, #0088FF 0%, #0066CC 100%);
+            box-shadow: 0 4px 14px 0 rgba(0, 136, 255, 0.39);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen transition-colors duration-200">
+<nav class="border-b border-slate-200 dark:border-slate-800 bg-white/50 dark:bg-card-dark/50 backdrop-blur-md sticky top-0 z-50">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between h-16 items-center">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
+<span class="material-icons text-white text-xl">sync</span>
+</div>
+<span class="text-xl font-bold tracking-tight">Skill Sync</span>
+</div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary transition-colors" href="#">Discover</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary transition-colors" href="#">Messages</a>
+<div class="h-8 w-8 rounded-full bg-slate-300 dark:bg-slate-700 flex items-center justify-center overflow-hidden border-2 border-primary">
+<img alt="Profile avatar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAaFLbAk21C2zjAlEb8GrlDBIpuvfAhPaTPG8RE_QH5psi_kUzDSwLpla2o67uoEQQFFHDN7WQbOgFYIybQ9l1nnowMNbog8SfFgp2GhigEjQt6Oe8H9jCqoAWlFFQATznZ9qWzlyWJnaKqBjEY7Qnw63amxp9l4G8Ko4oLiRCNHtnrEStJsn_h1jd_40jpsg8T3tfPLSJEbI8fU-30U4p6sMnlf5hW-bUZb4E9M17RysAmxXT6hCtANkdl2goIu5eDA98yDFiU1P_c"/>
+</div>
+</div>
+</div>
+</div>
+</nav>
+<main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+<div class="lg:col-span-8 space-y-8">
+<div class="bg-white dark:bg-card-dark rounded-2xl p-8 border border-slate-200 dark:border-slate-800 shadow-sm">
+<div class="flex flex-col md:flex-row items-start md:items-center gap-6">
+<div class="relative">
+<img alt="User Profile" class="w-32 h-32 rounded-2xl object-cover shadow-lg border-4 border-white dark:border-slate-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-Sz79XLQCyiU280klYCw4QTa0nez8WZUlpd4kjxtlA5CEFZyvVWvpMh9SuhlHyGEkxRjt6k9eBSj-QqhphAUOPHmhkSp4l3-SKmfGfD8lY4n2UMUM__DpMrasHj1qv6fs5m3L7luSMOiNU-oRGMsqIfUbVJu0AkhOAMHHmpxzjoJaEG_Xqpiq57GdkUDd4mWHlAmva_Fs_QSf4ujiuJsnu81Ja36OwZP8NSvp0a1ksE_xAmpNawAnMIugI6UZMO6WKtxQumCiZwzC"/>
+<div class="absolute -bottom-2 -right-2 bg-green-500 w-5 h-5 rounded-full border-4 border-white dark:border-card-dark"></div>
+</div>
+<div class="flex-1 space-y-2">
+<div class="flex flex-wrap items-center justify-between gap-4">
+<div>
+<h1 class="text-3xl font-bold text-slate-900 dark:text-white">Alex Rivera</h1>
+<p class="text-slate-500 dark:text-slate-400 font-medium">Full Stack Developer • San Francisco, CA</p>
+</div>
+<div class="flex gap-3">
+<button class="px-5 py-2.5 bg-slate-100 dark:bg-accent-dark text-slate-900 dark:text-white rounded-xl font-semibold hover:bg-slate-200 dark:hover:bg-slate-600 transition-all flex items-center gap-2">
+<span class="material-icons text-lg">edit</span>
+                                        Edit Profile
+                                    </button>
+<button class="px-5 py-2.5 primary-gradient-btn text-white rounded-xl font-semibold hover:opacity-90 transition-all flex items-center gap-2">
+<span class="material-icons text-lg">search</span>
+                                        Find People
+                                    </button>
+</div>
+</div>
+<p class="text-slate-600 dark:text-slate-300 max-w-2xl leading-relaxed">
+                                Passionate about building scalable web applications and exploring the future of distributed systems. Currently refining my Rust skills and looking to collaborate on open-source cloud infrastructure projects.
+                            </p>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="bg-white dark:bg-card-dark rounded-2xl p-6 border border-slate-200 dark:border-slate-800 shadow-sm">
+<div class="flex items-center gap-2 mb-6 text-primary">
+<span class="material-icons">verified</span>
+<h2 class="text-xl font-bold text-slate-900 dark:text-white uppercase tracking-wider text-sm">Skills I Have</h2>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1.5 bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 rounded-lg text-sm font-semibold border border-blue-100 dark:border-blue-800">React.js</span>
+<span class="px-3 py-1.5 bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 rounded-lg text-sm font-semibold border border-blue-100 dark:border-blue-800">TypeScript</span>
+<span class="px-3 py-1.5 bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 rounded-lg text-sm font-semibold border border-blue-100 dark:border-blue-800">Node.js</span>
+<span class="px-3 py-1.5 bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 rounded-lg text-sm font-semibold border border-blue-100 dark:border-blue-800">AWS</span>
+<span class="px-3 py-1.5 bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 rounded-lg text-sm font-semibold border border-blue-100 dark:border-blue-800">PostgreSQL</span>
+<span class="px-3 py-1.5 bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 rounded-lg text-sm font-semibold border border-blue-100 dark:border-blue-800">Tailwind CSS</span>
+</div>
+</div>
+<div class="bg-white dark:bg-card-dark rounded-2xl p-6 border border-slate-200 dark:border-slate-800 shadow-sm">
+<div class="flex items-center gap-2 mb-6 text-amber-500">
+<span class="material-icons">auto_awesome</span>
+<h2 class="text-xl font-bold text-slate-900 dark:text-white uppercase tracking-wider text-sm">Skills I Want</h2>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1.5 bg-amber-50 dark:bg-amber-900/30 text-amber-600 dark:text-amber-400 rounded-lg text-sm font-semibold border border-amber-100 dark:border-amber-800">Rust</span>
+<span class="px-3 py-1.5 bg-amber-50 dark:bg-amber-900/30 text-amber-600 dark:text-amber-400 rounded-lg text-sm font-semibold border border-amber-100 dark:border-amber-800">WebAssembly</span>
+<span class="px-3 py-1.5 bg-amber-50 dark:bg-amber-900/30 text-amber-600 dark:text-amber-400 rounded-lg text-sm font-semibold border border-amber-100 dark:border-amber-800">Solidity</span>
+<span class="px-3 py-1.5 bg-amber-50 dark:bg-amber-900/30 text-amber-600 dark:text-amber-400 rounded-lg text-sm font-semibold border border-amber-100 dark:border-amber-800">Kubernetes</span>
+</div>
+</div>
+</div>
+<div class="bg-white dark:bg-card-dark rounded-2xl p-6 border border-slate-200 dark:border-slate-800 shadow-sm">
+<h3 class="text-lg font-bold mb-4">Recent Collaboration</h3>
+<div class="space-y-4">
+<div class="flex gap-4 p-4 rounded-xl bg-slate-50 dark:bg-slate-800/50">
+<div class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center text-primary">
+<span class="material-icons">code</span>
+</div>
+<div>
+<p class="font-medium">Open Source Contribution</p>
+<p class="text-sm text-slate-500">Collaborated with 3 others on 'CloudNative-UI' toolkit.</p>
+<p class="text-xs text-slate-400 mt-1">2 days ago</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-4 space-y-6">
+<div class="bg-white dark:bg-card-dark rounded-2xl p-6 border border-slate-200 dark:border-slate-800 shadow-sm sticky top-24">
+<div class="flex items-center justify-between mb-6">
+<h2 class="font-bold text-lg">Similar Profiles</h2>
+<a class="text-primary text-sm font-semibold hover:underline" href="#">See all</a>
+</div>
+<div class="space-y-6">
+<div class="flex items-center gap-4 group cursor-pointer">
+<img alt="Sarah J." class="w-12 h-12 rounded-xl object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbmx9nsVC7Y6QsAi7a7as4368SMZKqig8YAxrZwVMFyRyrh8FWKXhs6G4EbDkGTZHzMbo-KEVQAtHhZyBD1XOZXE2VFEVTNyBSbbllZzuqFScJoUUmCU56f13Drif4dYNTCNx7vOfPZxLTD73x_-Unf1ANgD5Wmzu4H-uBEjsfUOieh2en9p9qR_Z_T6JsCZ-Zng5EWBuVV6Ykma3qDvjAfyDH9Vzr2TUFclttZfIWKQEsT_aDoSVWisR3A4MJK-VLkiiD6ZVPZ1tg"/>
+<div class="flex-1 min-w-0">
+<h4 class="font-bold text-slate-900 dark:text-white truncate group-hover:text-primary transition-colors">Sarah Jenkins</h4>
+<p class="text-xs text-slate-500 dark:text-slate-400 truncate">Haves: Rust, Go • Wants: React</p>
+</div>
+<button class="p-2 text-primary hover:bg-primary/10 rounded-lg transition-colors">
+<span class="material-icons">person_add</span>
+</button>
+</div>
+<div class="flex items-center gap-4 group cursor-pointer">
+<img alt="Marcus K." class="w-12 h-12 rounded-xl object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYbmQrb1Yth7h4zqD75JVJ0iiYCzzChNcp8MnL7FlkKUKJrAlSUYf9vJ-wV1iqWl2NGwbQ6uQmq-FksfkKlkR9nbd7twobAHWGUScBgD_u5ZoFjTDf4vZ97mol-gMm68ngpVyDQ7ZBLRRdmDvcS-8C8BYPxpqZ3jLHxcmjdRN96-dNFzP8Zvez6vMtDdCu_Kfsv7EeRb1itevOxHo0KZZbJ8uGrtl1dpNX4Z1N6H_5GPQPbCIBqf4jD9uLm3tSOch7GtuWOmsWvaxl"/>
+<div class="flex-1 min-w-0">
+<h4 class="font-bold text-slate-900 dark:text-white truncate group-hover:text-primary transition-colors">Marcus Koppel</h4>
+<p class="text-xs text-slate-500 dark:text-slate-400 truncate">Haves: Web3, Solidity • Wants: TS</p>
+</div>
+<button class="p-2 text-primary hover:bg-primary/10 rounded-lg transition-colors">
+<span class="material-icons">person_add</span>
+</button>
+</div>
+<div class="flex items-center gap-4 group cursor-pointer">
+<img alt="Elena V." class="w-12 h-12 rounded-xl object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPo5J12DRRXXZt6qHf0NH-yJhaEuU23OpKqACSp921D43SOv3W4Se0LnducnW_25cZacd5NBqtlSrGWlUQZbBcYIjr4MqwitAvoZsd0JwrnaqB98L_L43YMpsnXPvvFtMU1bAjVt0kPWvVWVUiPS1J2Tsx4hV8TgQ1ZKcquvAceoCB7yqib9qsb5h1BBC6Utq1eh1nrdaDd9Q7EX31XUaMGLB_mYrZN9UxbmvfGTRWjTsdbpK18cKUScZLFNPXgPNixy4GUc6gLnAE"/>
+<div class="flex-1 min-w-0">
+<h4 class="font-bold text-slate-900 dark:text-white truncate group-hover:text-primary transition-colors">Elena Vasilyev</h4>
+<p class="text-xs text-slate-500 dark:text-slate-400 truncate">Haves: UI/UX, Figma • Wants: React</p>
+</div>
+<button class="p-2 text-primary hover:bg-primary/10 rounded-lg transition-colors">
+<span class="material-icons">person_add</span>
+</button>
+</div>
+</div>
+<div class="mt-8 pt-6 border-t border-slate-100 dark:border-slate-800">
+<div class="bg-blue-500/10 rounded-xl p-4 text-center">
+<h5 class="text-sm font-bold text-primary mb-2">Grow your network</h5>
+<p class="text-xs text-slate-600 dark:text-slate-400 mb-4">Users with similar interests often collaborate on weekend projects.</p>
+<button class="w-full py-2 bg-primary text-white rounded-lg text-sm font-bold shadow-md hover:opacity-90 transition-opacity">
+                                Explore Groups
+                            </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<button class="fixed bottom-6 right-6 w-12 h-12 bg-white dark:bg-card-dark rounded-full shadow-lg border border-slate-200 dark:border-slate-800 flex items-center justify-center hover:scale-110 transition-transform z-50" onclick="document.documentElement.classList.toggle('dark')">
+<span class="material-icons text-slate-600 dark:text-amber-400">dark_mode</span>
+</button>
+
+</body></html>
