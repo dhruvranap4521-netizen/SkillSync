@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Skill Sync - Create Account</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#0085FF",
+              "background-light": "#F8FAFC",
+              "background-dark": "#0F172A",
+              "card-dark": "#1E293B",
+              "input-dark": "#334155",
+            },
+            fontFamily: {
+              display: ["Inter", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.75rem",
+            },
+          },
+        },
+      };
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .glow-button {
+            box-shadow: 0 0 20px rgba(0, 133, 255, 0.4);
+            transition: all 0.3s ease;
+        }
+        .glow-button:hover {
+            box-shadow: 0 0 30px rgba(0, 133, 255, 0.6);
+            transform: translateY(-1px);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-[#0A1120] min-h-screen flex flex-col items-center justify-center p-4">
+<div class="mb-8 text-center">
+<div class="flex items-center justify-center gap-2 mb-2">
+<div class="w-10 h-10 bg-primary rounded-xl flex items-center justify-center shadow-lg shadow-primary/20">
+<span class="material-icons text-white">sync_alt</span>
+</div>
+<h1 class="text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white">Skill Sync</h1>
+</div>
+<p class="text-slate-500 dark:text-slate-400 max-w-sm mx-auto">
+            Connect skills, collaborate smarter, and grow faster.
+        </p>
+</div>
+<div class="w-full max-w-md bg-white dark:bg-[#1A2536] p-8 md:p-12 rounded-[2rem] shadow-2xl dark:shadow-none border border-slate-100 dark:border-slate-800">
+<h2 class="text-3xl font-bold text-slate-900 dark:text-white mb-8 text-center">Create Account</h2>
+<form action="#" class="space-y-5" method="POST">
+<div class="relative">
+<input class="w-full bg-slate-50 dark:bg-[#2C394B] border-transparent focus:border-primary focus:ring-0 text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 py-4 px-6 rounded-2xl transition-all duration-200" placeholder="Email" type="email"/>
+</div>
+<div class="relative">
+<input class="w-full bg-slate-50 dark:bg-[#2C394B] border-transparent focus:border-primary focus:ring-0 text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 py-4 px-6 rounded-2xl transition-all duration-200" placeholder="Password" type="password"/>
+</div>
+<div class="relative">
+<input class="w-full bg-slate-50 dark:bg-[#2C394B] border-transparent focus:border-primary focus:ring-0 text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 py-4 px-6 rounded-2xl transition-all duration-200" placeholder="Full Name" type="text"/>
+</div>
+<div class="relative">
+<select class="w-full bg-slate-50 dark:bg-[#2C394B] border-transparent focus:border-primary focus:ring-0 text-slate-400 dark:text-slate-400 py-4 px-6 rounded-2xl appearance-none transition-all duration-200 cursor-pointer">
+<option disabled="" selected="" value="">Select Region</option>
+<option value="na">North America</option>
+<option value="eu">Europe</option>
+<option value="as">Asia</option>
+<option value="sa">South America</option>
+<option value="af">Africa</option>
+<option value="oc">Oceania</option>
+</select>
+<div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-6 text-slate-400">
+<span class="material-icons text-xl">expand_more</span>
+</div>
+</div>
+<div class="pt-4">
+<button class="w-full bg-primary hover:bg-blue-600 text-white font-bold py-4 px-6 rounded-2xl glow-button flex items-center justify-center gap-2 group" type="submit">
+                    Join Skill Sync
+                    <span class="material-icons text-lg group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+</form>
+<div class="mt-8 text-center">
+<a class="text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-primary transition-colors text-sm font-medium flex items-center justify-center gap-1 group" href="#">
+                Already have an account? 
+                <span class="text-primary group-hover:underline">Login</span>
+</a>
+</div>
+</div>
+<button class="fixed bottom-6 right-6 p-3 bg-white dark:bg-slate-800 rounded-full shadow-lg border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300" onclick="document.documentElement.classList.toggle('dark')">
+<span class="material-icons block dark:hidden">dark_mode</span>
+<span class="material-icons hidden dark:block">light_mode</span>
+</button>
+
+</body></html>
